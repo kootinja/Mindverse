@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BootAnimation.unity
+    guid: 4556dd5e4e48c214bb95e5c6c1587cfb
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: a5daed535c02a3b4a973535ea35118c1
+  - enabled: 1
+    path: Assets/Scenes/Directions.unity
+    guid: bcb3b480f4c7943408a07dc3f9c4ff99
+  - enabled: 1
+    path: Assets/Scenes/TutorialScreen.unity
+    guid: 80a14c6ec4f724281b5da47b43f3eb9c
+  - enabled: 1
+    path: Assets/Scenes/TS1.unity
+    guid: 36f3bfb79bbab492f955c43a7d5ee9d3
+  - enabled: 1
+    path: Assets/Scenes/TS2.unity
+    guid: 1961257fc2c2344bf9bbef96fae93d43
+  - enabled: 1
+    path: Assets/Scenes/TS3.unity
+    guid: 6beb079a620fa4feda9e8a80b4d5a5ef
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: a6d5844f8f6764e9398715be8484e6bd
+  - enabled: 1
+    path: Assets/Scenes/L1S1.unity
+    guid: b5d84301652634d39a8c0f8755ccdef3
+  - enabled: 1
+    path: Assets/Scenes/L1S2.unity
+    guid: 3c89cfa80325a4961a8ce976c5be4f08
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  m_configObjects: {}
