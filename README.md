@@ -1,1 +1,2 @@
 # Mindverse
+Senior Design Project
