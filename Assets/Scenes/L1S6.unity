@@ -1070,8 +1070,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueText: {fileID: 1589434650}
   Sentences:
-  - "You wake up in a classroom you\u2019ve never seen before. The clock says 3 o\u2019clock\u2026"
-  - 'You: Why am I still here?'
+  - "In front of you stands a girl with a red-hexagon for a head, their arms crossed
+    as they look down at someone with a dark-blue upside-down triangle one. Though
+    it\u2019s a bit fuzzy, you know them to be Jessie and Sami."
+  - 'Jessie: Come on, get up! Be a man and fight me! '
+  - "The girl doesn\u2019t give them a chance to respond, kicking them in the stomach
+    with her boot."
+  - 'You feel your blood boil and your vision goes red. '
+  - 'Thoma leans over and whispers to you. '
+  - 'Thoma: We should do something, right? '
   DialogueSpeed: 0.05
   nextButton: {fileID: 1507153178}
 --- !u!4 &2003571627
