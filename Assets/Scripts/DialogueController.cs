@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueController : MonoBehaviour
 {
     public TextMeshProUGUI DialogueText;
-    public string[] Sentences;
-    private int Index;
+    public List<string> Sentences;
+    public int Index;
     public float DialogueSpeed;
-    
 
     public GameObject nextButton;
 
@@ -26,12 +26,12 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    void StartDialogue() {
+    public void StartDialogue() {
         Index = 0;
         StartCoroutine(WriteSentence());
     }
 
-    IEnumerator WriteSentence() 
+    public IEnumerator WriteSentence() 
     {
         foreach(char Character in Sentences[Index].ToCharArray()) 
         {
@@ -46,15 +46,14 @@ public class DialogueController : MonoBehaviour
 
         nextButton.SetActive(false);
 
-        if(Index < Sentences.Length - 1) 
+        if(Index < Sentences.Count - 1) 
         {
             Index++;
             DialogueText.text = string.Empty;
             StartCoroutine(WriteSentence());
 
         } else {
-            DialogueText.text = "";
-            nextButton.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

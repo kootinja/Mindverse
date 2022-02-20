@@ -1,38 +1,127 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MultipleChoice : MonoBehaviour
 {
-    public GameObject TextBox;
-    public GameObject Choice01;
-    public GameObject Choice02;
-    public GameObject Choice03;
+    private DialogueController dialogueController;
+    public GameObject choiceContainer;
+    public GameObject dialogueContainer;
+    public GameObject subchoiceContainer;
+
+    public Image choiceButton1;
+    public Image choiceButton2;
+    public Image choiceButton3;
+
     public int ChoiceMade;
-    
-    public void ChoiceOption1 () {
-        TextBox.GetComponent<Text>().text = "You find your phone under the desk, buzzing with two notifications: MISSED CALL – MOM. VOICEMAIL – MOM. You click on the notification and your mother’s soft voice echoes in the empty classroom. Mom: Hey, sweetie. I know you’re probably hanging out with your friends after school, but can you please make sure to grab some milk on the way home? Thanks! The voicemail ends and you glance around.  ";
-        ChoiceMade = 1;
+    private bool MultiChoice = false;
+
+    public List<string> choice1Sentences;
+    public List<string> choice2Sentences;
+    public List<string> choice2aSentences;
+    public List<string> choice2bSentences;
+    public List<string> choice3Sentences;
+    public List<string> transitionalSentences;
+
+    private void Start()
+    {
+        dialogueController = GetComponent<DialogueController>();
     }
 
-    public void ChoiceOption2 () {
-        TextBox.GetComponent<Text>().text = "You walk over to the teacher’s desk. It was mostly cleared off, but there were still a number of papers here and there. You don’t know how your stuff couldn’t ended up here, especially since you couldn’t remember class, but you figure it’s worth a shot. *sound of papers rustling* After messing around with the papers, you find a letter written in by the teacher… addressed to your mother of all people.";
-        ChoiceMade = 2;
+    public void ChoiceOption1()
+    {
+        ChoiceMade += 1;
+        choiceContainer.SetActive(false);
+        startChoiceDialogue(choice1Sentences);
+        choiceButton1.color = new Color(0.4745098f, 0.6078432f, 0.6078432f, 0.772549f);
     }
 
-    public void ChoiceOption3 () {
-        TextBox.GetComponent<Text>().text = "You go to the coat rack near the door, noting that the janitor was humming some odd tune just a ways away. Shaking your head, you go through the myriad of coats on the hooks, looking for your own. In no time you find it and reach into the pockets, pulling out half of a key. You: Why…?You let out a frustrated huff. Just what were you supposed to do with half of a key? But you remember the janitor is waiting, so you turn back to the classroom. You’ll figure it out later.";
-        ChoiceMade = 3;
+    public void ChoiceOption2()
+    {
+        ChoiceMade += 2;
+        MultiChoice = true;
+        choiceContainer.SetActive(false);
+        startChoiceDialogue(choice2Sentences);
+        choiceButton2.color = new Color(0.4745098f, 0.6078432f, 0.6078432f, 0.772549f);
+    }
+
+    public void ChoiceOption3()
+    {
+        ChoiceMade += 3;
+        choiceContainer.SetActive(false);
+        startChoiceDialogue(choice3Sentences);
+        choiceButton3.color = new Color(0.4745098f, 0.6078432f, 0.6078432f, 0.772549f);
+    }
+
+    public void SubChoice1()
+    {
+        subchoiceContainer.SetActive(false);
+        startChoiceDialogue(choice2aSentences);
+    }
+
+    public void SubChoice2()
+    {
+        subchoiceContainer.SetActive(false);
+        startChoiceDialogue(choice2bSentences);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(ChoiceMade >= 1) {
-            Choice01.SetActive (false);
-            Choice01.SetActive (false);
-            Choice01.SetActive (false);
+
+    }
+
+    public void startChoiceDialogue(List<string> dialogue)
+    {
+        dialogueController.Sentences = dialogue;
+        dialogueContainer.SetActive(true);
+        dialogueController.StartDialogue();
+    }
+
+    /// <summary>
+    /// Override method for DialogueController.NextSentence
+    /// Use this method when you are returning to a choice selection screen
+    /// </summary>
+    public void NextSentence()
+    {
+
+        dialogueController.nextButton.SetActive(false);
+
+        if (dialogueController.Index < dialogueController.Sentences.Count - 1)
+        {
+            dialogueController.Index++;
+            dialogueController.DialogueText.text = string.Empty;
+            StartCoroutine(dialogueController.WriteSentence());
+        }
+        else
+        {
+            if (ChoiceMade == 6)
+            {
+                ChoiceMade++;
+                dialogueController.DialogueText.text = string.Empty;
+                startChoiceDialogue(transitionalSentences);
+            } else if (ChoiceMade > 6)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            } else
+            {
+                dialogueController.DialogueText.text = string.Empty;
+                if (MultiChoice)
+                {
+                    subchoiceContainer.SetActive(true);
+                    MultiChoice = false;
+                } else
+                {
+                    choiceContainer.SetActive(true);
+                }
+                dialogueContainer.SetActive(false);
+            }
         }
     }
+
+
 }
+   
