@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TS2.unity
     guid: 1961257fc2c2344bf9bbef96fae93d43
   - enabled: 1
+    path: Assets/Scenes/PuzzleTutorial.unity
+    guid: a432c7c80c690114b85fade81fc5972e
+  - enabled: 1
     path: Assets/Scenes/TS3.unity
     guid: 6beb079a620fa4feda9e8a80b4d5a5ef
   - enabled: 1

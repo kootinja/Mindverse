@@ -109,14 +109,19 @@ public class MultipleChoice : MonoBehaviour
             } else
             {
                 dialogueController.DialogueText.text = string.Empty;
-                if (MultiChoice)
-                {
-                    subchoiceContainer.SetActive(true);
-                    MultiChoice = false;
-                } else
-                {
-                    choiceContainer.SetActive(true);
-                }
+
+                    if (MultiChoice)
+                    {
+                        if (subchoiceContainer != null)
+                        {
+                            subchoiceContainer.SetActive(true);
+                        }
+                        MultiChoice = false;
+                    }
+                    else
+                    {
+                        choiceContainer.SetActive(true);
+                    }
                 dialogueContainer.SetActive(false);
             }
         }

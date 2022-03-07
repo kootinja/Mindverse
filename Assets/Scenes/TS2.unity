@@ -710,12 +710,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.668
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   choiceButton1: {fileID: 1270182535}
   choiceButton2: {fileID: 1562006555}
   choiceButton3: {fileID: 2121353063}
-  ChoiceMade: 4
+  ChoiceMade: 0
   choice1Sentences:
   - "You find your phone under the desk, buzzing with two notifications: MISSED CALL
     \u2013 MOM. VOICEMAIL \u2013 MOM."
