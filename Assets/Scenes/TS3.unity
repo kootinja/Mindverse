@@ -1709,7 +1709,7 @@ MonoBehaviour:
   - 'The figure looks around, humming to themselves. '
   - "???: The school is pretty empty. We can try our luck with avoiding the principal,
     if you don\u2019t mind me helping?"
-  Index: 0
+  Index: 14
   DialogueSpeed: 0.05
   nextButton: {fileID: 978380175}
 --- !u!114 &1879172599
@@ -1731,6 +1731,9 @@ MonoBehaviour:
   choiceButton2: {fileID: 1267240896}
   choiceButton3: {fileID: 120640948}
   ChoiceMade: 0
+  Choice1Value: 6
+  Choice2Value: 6
+  Choice3Value: 6
   choice1Sentences:
   - 'You: Sure.'
   - "???: For a second there I thought you\u2019d say no. Sweet. "

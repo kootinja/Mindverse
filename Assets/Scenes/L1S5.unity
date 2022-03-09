@@ -213,12 +213,12 @@ PrefabInstance:
     - target: {fileID: 5089678426306776468, guid: 772585d2dee6ead4396faea38bb5379f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 266
+      value: 276
       objectReference: {fileID: 0}
     - target: {fileID: 5089678426306776468, guid: 772585d2dee6ead4396faea38bb5379f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -155
+      value: -196
       objectReference: {fileID: 0}
     - target: {fileID: 5089678426306776468, guid: 772585d2dee6ead4396faea38bb5379f,
         type: 3}
@@ -293,8 +293,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000023842, y: 0}
-  m_SizeDelta: {x: 1224.72, y: 287.14}
+  m_AnchoredPosition: {x: -0.0000038147, y: -0.0000042915}
+  m_SizeDelta: {x: 929.04, y: 217.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &995698855
 CanvasRenderer:
@@ -418,19 +418,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090355745}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.69375, y: 0.69375, z: 0.69375}
   m_Children:
   - {fileID: 995698854}
   - {fileID: 1359626039}
-  m_Father: {fileID: 1642046503}
-  m_RootOrder: 0
+  m_Father: {fileID: 2035307516}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -143, y: -326}
-  m_SizeDelta: {x: 1259.84, y: 319.14}
+  m_AnchoredPosition: {x: -188.70001, y: -160.95}
+  m_SizeDelta: {x: 994.93, y: 252.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1090355747
 MonoBehaviour:
@@ -741,8 +741,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 506.25006, y: -116.63001}
-  m_SizeDelta: {x: 222.79, y: 63.03}
+  m_AnchoredPosition: {x: 443.52, y: -97.58}
+  m_SizeDelta: {x: 107.9, y: 56.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1563414520
 GameObject:
@@ -782,6 +782,7 @@ MonoBehaviour:
   - The both of you are almost to the door when you hear the sound of something slamming
     against metal. Then, gentle sobbing and angry whispers.
   - 'Thoma: What the heck was that?'
+  Index: 0
   DialogueSpeed: 0.05
   nextButton: {fileID: 1359626035}
 --- !u!4 &1563414522
@@ -894,8 +895,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1090355746}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1161,6 +1161,7 @@ RectTransform:
   m_Children:
   - {fileID: 1667053152}
   - {fileID: 658257896}
+  - {fileID: 1090355746}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

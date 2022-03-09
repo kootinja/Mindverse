@@ -18,6 +18,9 @@ public class MultipleChoice : MonoBehaviour
 
     public int ChoiceMade;
     private bool MultiChoice = false;
+    public int Choice1Value;
+    public int Choice2Value;
+    public int Choice3Value;
 
     public List<string> choice1Sentences;
     public List<string> choice2Sentences;
@@ -33,7 +36,7 @@ public class MultipleChoice : MonoBehaviour
 
     public void ChoiceOption1()
     {
-        ChoiceMade += 1;
+        ChoiceMade += Choice1Value;
         choiceContainer.SetActive(false);
         startChoiceDialogue(choice1Sentences);
         choiceButton1.color = new Color(0.4745098f, 0.6078432f, 0.6078432f, 0.772549f);
@@ -41,7 +44,7 @@ public class MultipleChoice : MonoBehaviour
 
     public void ChoiceOption2()
     {
-        ChoiceMade += 2;
+        ChoiceMade += Choice2Value;
         MultiChoice = true;
         choiceContainer.SetActive(false);
         startChoiceDialogue(choice2Sentences);
@@ -50,7 +53,7 @@ public class MultipleChoice : MonoBehaviour
 
     public void ChoiceOption3()
     {
-        ChoiceMade += 3;
+        ChoiceMade += Choice3Value;
         choiceContainer.SetActive(false);
         startChoiceDialogue(choice3Sentences);
         choiceButton3.color = new Color(0.4745098f, 0.6078432f, 0.6078432f, 0.772549f);
@@ -90,9 +93,8 @@ public class MultipleChoice : MonoBehaviour
 
         dialogueController.nextButton.SetActive(false);
 
-        if (dialogueController.Index < dialogueController.Sentences.Count - 1)
+        if (dialogueController.Index < dialogueController.Sentences.Count)
         {
-            dialogueController.Index++;
             dialogueController.DialogueText.text = string.Empty;
             StartCoroutine(dialogueController.WriteSentence());
         }

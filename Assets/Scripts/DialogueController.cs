@@ -46,9 +46,8 @@ public class DialogueController : MonoBehaviour
 
         nextButton.SetActive(false);
 
-        if(Index < Sentences.Count - 1) 
+        if(Index < Sentences.Count) 
         {
-            Index++;
             DialogueText.text = string.Empty;
             StartCoroutine(WriteSentence());
 

@@ -1247,6 +1247,9 @@ MonoBehaviour:
   choiceButton2: {fileID: 1562006555}
   choiceButton3: {fileID: 2121353063}
   ChoiceMade: 0
+  Choice1Value: 1
+  Choice2Value: 2
+  Choice3Value: 3
   choice1Sentences:
   - "You find your phone under the desk, buzzing with two notifications: MISSED CALL
     \u2013 MOM. VOICEMAIL \u2013 MOM."
