@@ -18,6 +18,7 @@ public class MultipleChoice : MonoBehaviour
 
     public int ChoiceMade;
     private bool MultiChoice = false;
+    private bool optionalGame = false;
     public int Choice1Value;
     public int Choice2Value;
     public int Choice3Value;
@@ -36,14 +37,28 @@ public class MultipleChoice : MonoBehaviour
 
     public void ChoiceOption1()
     {
+        Outcome.ChoseChoice1 = true;
         ChoiceMade += Choice1Value;
         choiceContainer.SetActive(false);
         startChoiceDialogue(choice1Sentences);
         choiceButton1.color = new Color(0.4745098f, 0.6078432f, 0.6078432f, 0.772549f);
     }
+    /// <summary>
+    /// This provides for an optional minigame from a choice.
+    /// Override method for ChoiceOption
+    /// </summary>
+    public void Choice1WithOptionalGame()
+    {
+        optionalGame = true;
+        Outcome.ChoseChoice1 = true;
+        ChoiceMade += Choice1Value;
+        choiceContainer.SetActive(false);
+        startChoiceDialogue(choice1Sentences);
+    }
 
     public void ChoiceOption2()
     {
+        Outcome.ChoseChoice2 = true;
         ChoiceMade += Choice2Value;
         MultiChoice = true;
         choiceContainer.SetActive(false);
@@ -53,6 +68,7 @@ public class MultipleChoice : MonoBehaviour
 
     public void ChoiceOption3()
     {
+        Outcome.ChoseChoice3 = true;
         ChoiceMade += Choice3Value;
         choiceContainer.SetActive(false);
         startChoiceDialogue(choice3Sentences);
@@ -71,12 +87,11 @@ public class MultipleChoice : MonoBehaviour
         startChoiceDialogue(choice2bSentences);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    /// <summary>
+    /// Override method for DialogueController.startDialogue
+    /// Starts the Scenes dialogue.
+    /// </summary>
+    /// <param name="dialogue">List of sentences to write out.</param>
     public void startChoiceDialogue(List<string> dialogue)
     {
         dialogueController.Sentences = dialogue;
@@ -104,7 +119,21 @@ public class MultipleChoice : MonoBehaviour
             {
                 ChoiceMade++;
                 dialogueController.DialogueText.text = string.Empty;
-                startChoiceDialogue(transitionalSentences);
+                if (transitionalSentences.Count > 0)
+                {
+                    startChoiceDialogue(transitionalSentences);
+                } else
+                {
+                    if (optionalGame)
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    } else if (SceneManager.GetActiveScene().buildIndex == 17)
+                    {
+                        SceneManager.LoadScene(19);
+                    }
+                    
+                }
+                
             } else if (ChoiceMade > 6)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

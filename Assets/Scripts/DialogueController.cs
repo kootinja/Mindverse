@@ -33,7 +33,7 @@ public class DialogueController : MonoBehaviour
 
     public IEnumerator WriteSentence() 
     {
-        foreach(char Character in Sentences[Index].ToCharArray()) 
+        foreach(char Character in Sentences[Index].ToCharArray())
         {
             DialogueText.text += Character;
             yield return new WaitForSeconds(DialogueSpeed);

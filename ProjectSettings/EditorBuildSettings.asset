@@ -12,30 +12,60 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: a5daed535c02a3b4a973535ea35118c1
   - enabled: 1
-    path: Assets/Scenes/Directions.unity
+    path: Assets/Scenes/Tutorial/Directions.unity
     guid: bcb3b480f4c7943408a07dc3f9c4ff99
   - enabled: 1
-    path: Assets/Scenes/TutorialScreen.unity
+    path: Assets/Scenes/Tutorial/TutorialScreen.unity
     guid: 80a14c6ec4f724281b5da47b43f3eb9c
   - enabled: 1
-    path: Assets/Scenes/TS1.unity
+    path: Assets/Scenes/Tutorial/TS1.unity
     guid: 36f3bfb79bbab492f955c43a7d5ee9d3
   - enabled: 1
-    path: Assets/Scenes/TS2.unity
+    path: Assets/Scenes/Tutorial/TS2.unity
     guid: 1961257fc2c2344bf9bbef96fae93d43
   - enabled: 1
     path: Assets/Scenes/PuzzleTutorial.unity
     guid: a432c7c80c690114b85fade81fc5972e
   - enabled: 1
-    path: Assets/Scenes/TS3.unity
+    path: Assets/Scenes/Tutorial/TS3.unity
     guid: 6beb079a620fa4feda9e8a80b4d5a5ef
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Level 1/Level1.unity
     guid: a6d5844f8f6764e9398715be8484e6bd
   - enabled: 1
-    path: Assets/Scenes/L1S4.unity
+    path: Assets/Scenes/Level 1/L1S4.unity
     guid: b5d84301652634d39a8c0f8755ccdef3
   - enabled: 1
-    path: Assets/Scenes/L1S5.unity
+    path: Assets/Scenes/Level 1/L1S5.unity
     guid: 3c89cfa80325a4961a8ce976c5be4f08
+  - enabled: 1
+    path: Assets/Scenes/Level 1/L1S6.unity
+    guid: 38a03aa019e5f4593902b9c6bce088b5
+  - enabled: 1
+    path: Assets/Scenes/Level 1/L1S7.unity
+    guid: f5cc7ab35a92d416c942f51c1e92f508
+  - enabled: 1
+    path: Assets/Scenes/Level 1/L1S8a.unity
+    guid: 4d8f169bc43cf4d108bff9c17ef67737
+  - enabled: 1
+    path: Assets/Scenes/Level 2/L2S9.unity
+    guid: 1f2972f5c13cd274bb3992f705f5d1af
+  - enabled: 1
+    path: Assets/Scenes/Level 2/L2S10.unity
+    guid: ed395520a7d22e34f8b7455f50c84d65
+  - enabled: 1
+    path: Assets/Scenes/Level 2/L2S11.unity
+    guid: 1d528928da2ff2346ae65f56087efb1f
+  - enabled: 1
+    path: Assets/Scenes/Level 2/L2S12.unity
+    guid: 8dac6c743f31491499780835c0ab64e3
+  - enabled: 1
+    path: Assets/Scenes/Level 2/L2S12miniGame.unity
+    guid: d5edca22d866c9d4a9538ea20556096a
+  - enabled: 1
+    path: Assets/Scenes/Level 2/L2S12a.unity
+    guid: 3a9da957d33b5da41a0e71c30a6acfe4
+  - enabled: 1
+    path: Assets/Scenes/Level 2/L2S13.unity
+    guid: 6486b4bbb79dcda40b54896402472a2e
   m_configObjects: {}
